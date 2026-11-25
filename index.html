@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071b2b"><title>潮目 SHIOME | BOT対戦</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+<header><div><p class="eyebrow">BOT BATTLE</p><h1>潮目 <span>SHIOME</span></h1></div><button id="helpBtn" class="ghost">遊び方</button></header>
+<section class="scoreboard">
+<div class="player"><span>あなた</span><strong id="playerScore">10,000</strong><small>ポイント</small></div>
+<div class="round"><small>ROUND</small><strong><span id="roundNo">1</span>/10</strong></div>
+<div class="player bot"><span id="botName">潮読みBOT</span><strong id="botScore">10,000</strong><small>ポイント</small></div>
+</section>
+<section class="sea" id="sea">
+<div class="status" id="status">賭け先と金額を選んでください</div>
+<div class="stones"><div class="stone hidden" id="stone0">?</div><div class="stone hidden" id="stone1">?</div><div class="stone hidden" id="stone2">?</div></div>
+<div class="level"><span>最終潮位</span><strong id="level">--</strong><b id="result">未確定</b></div>
+</section>
+<section class="controls">
+<div class="chips" aria-label="賭け額"><button data-chip="100">100</button><button data-chip="500" class="active">500</button><button data-chip="1000">1,000</button><button data-chip="2500">2,500</button></div>
+<div class="bets" id="bets"></div>
+<div class="ticket">
+<div><span>あなたのベット</span><strong id="ticketText">未選択</strong></div><div><span>合計</span><strong id="stake">0</strong></div>
+<button id="clearBtn" class="ghost">取消</button><button id="drawBtn" class="primary" disabled>潮を読む</button>
+</div>
+</section>
+<section class="bot-panel"><h2>BOTの動き</h2><p id="botMove">BOTはあなたのベット確定後に、独自の戦略で賭けます。</p></section>
+<section class="history"><h2>対戦履歴</h2><div id="history"><p class="muted">まだ結果はありません。</p></div></section>
+</div>
+<dialog id="help"><button class="close" id="closeHelp">×</button><h2>遊び方</h2><ol><li>チップ額を選び、複数のベット枠にポイントを置きます。</li><li>「潮を読む」でBOTも同時にベットします。</li><li>18個の潮石から3個を重複なしで抽選します。</li><li>成立したベットの総返却が残高に加算されます。</li><li>10ラウンド終了時に残高が多い側の勝利です。</li></ol><p>実際のお金や換金物は扱わない娯楽用ポイントゲームです。</p></dialog>
+<dialog id="finish"><h2 id="finishTitle">対戦終了</h2><p id="finishText"></p><button id="restartBtn" class="primary">もう一度対戦</button></dialog>
+<script src="app.js"></script>
+</body></html>

@@ -1,0 +1,9 @@
+{
+  "name": "潮目 SHIOME BOT対戦",
+  "short_name": "潮目",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#071b2b",
+  "theme_color": "#071b2b",
+  "lang": "ja"
+}
